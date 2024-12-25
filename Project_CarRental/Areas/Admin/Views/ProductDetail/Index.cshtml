@@ -1,0 +1,70 @@
+﻿@using Project_CarRental.Models;
+@model IList<ProductDetail>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Danh sách thông tin chi tiết xe</h2>
+    </div>
+
+    <p>
+        <a type="button" class="btn btn-success" asp-area="Admin" asp-controller="ProductDetail" asp-action="Create">
+            <i class="bi bi-file-earmark-text me-1">Thêm mới thông tin chi tiết xe</i>
+        </a>
+    </p>
+
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+                    <div class="card-body mt-4">
+                        <table class="table table-borderless datatable">
+                            <thead>
+                                <tr>
+                                    <th class="col-1 text-center">#</th>
+                                    <th class="col-2 text-center">Tên xe</th>
+                                    <th class="col-1 text-center">Ảnh</th>
+                                    <th class="col-1 text-center">Số ghế</th>
+                                    <th class="col-1 text-center">Số dặm (km)</th>
+                                    <th class="col-1 text-center">Động cơ</th>
+                                    <th class="col-1 text-center">Màu</th>
+                                    <th class="col-1 text-center">Nhiên liệu</th>
+                                    <th class="col-1 text-center">Giá ngày (VNĐ)</th>
+                                    <th class="col-1 text-center">Ẩn/Hiện</th>
+                                    <th class="col-1 text-center">Chức năng</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th class="text-center" scope="row">@item.ProductDetailID</th>
+                                        <td><a asp-area="Admin" asp-controller="ProductDetail" asp-action="Details" asp-route-id="@item.ProductDetailID" class="text-primary">@item.CarName</a></td>
+                                        <td class="text-center">
+                                            <img src="@item.Images" alt="Image" style="width: 100px; height: auto;" />
+                                        </td>
+                                        <td class="text-center">@item.Seats</td>
+                                        <td class="text-center">@item.Mileage</td>
+                                        <td class="text-center">@item.Transmission</td>
+                                        <td class="text-center">@item.Color</td>
+                                        <td class="text-center">@item.Fuel</td>
+                                        <td class="text-center">@item.PricesDay</td>
+                                        <td class="text-center">@item.IsActive</td>
+                                        <td class="text-center">
+                                            <a asp-area="Admin" asp-controller="ProductDetail" asp-action="Edit" asp-route-id="@item.ProductDetailID" class="btn btn-primary btn-sm" title="Sửa thông tin chi tiết xe"><i class="bi bi-pencil"></i></a>
+                                            <a asp-area="Admin" asp-controller="ProductDetail" asp-action="Delete" asp-route-id="@item.ProductDetailID" class="btn btn-danger btn-sm" title="Xóa thông tin chi tiết xe"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

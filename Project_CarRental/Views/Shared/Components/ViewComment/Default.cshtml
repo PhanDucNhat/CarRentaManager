@@ -1,0 +1,24 @@
+﻿@using Project_CarRental.Models;
+@using Project_CarRental.Utilities;
+@model IList<ViewComment>
+
+<div class="mt-2">
+    <h3 class="mb-5">Bình luận</h3>
+    <ul class="comment-list">
+        @foreach (var item in Model)
+        {
+            <li class="comment">
+                <div class="vcard bio">
+                    <img src="@item.Avatar" alt="Image placeholder">
+                </div>
+                <div class="comment-body">
+                    <h3>@item.FullName</h3>
+                    <div class="meta">@item.CreateDateMessage.Value.ToString("dd-MM-yyyy")</div>
+                    <p>@item.Message</p>
+                    <p><a href="#" class="reply">Trả lời</a></p>
+                </div>
+            </li>
+        }
+        <!-- END comment-list -->
+    </ul>
+</div>

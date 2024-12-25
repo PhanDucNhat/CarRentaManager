@@ -1,0 +1,136 @@
+﻿<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<section class="hero-wrap-1 hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg'); height: 20%; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+            <div class="col-md-9 ftco-animate pb-5">
+                <p class="breadcrumbs"><span class="mr-2"><a href="@Url.Action("Index","Home")">Trang chủ <i class="ion-ios-arrow-forward"></i></a></p>
+                <h1 class="mb-3 bread">Thông tin cá nhân</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Start -->
+<div class="container-xxl py-5" style="margin-top: 15px;">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Profile Card -->
+            <div class="col-xl-4">
+                <div class="card shadow-lg rounded" style="background-color: #f2f2f2;">
+                    <div class="card-body profile-card pt-5 d-flex flex-column align-items-center">
+                        <img src="~/images/person_1.jpg" alt="Profile" class="rounded-circle border border-3 border-primary" style="width: 120px; height: 120px;">
+                        <h2 class="mt-3 text-dark">Phan Nhat</h2>
+                        <h5 class="text-muted">Người dùng</h5>
+                        <div class="social-links mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm mx-1"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mx-1"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mx-1"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mx-1"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Tabs -->
+            <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card shadow-lg rounded" style="background-color: #f2f2f2;">
+                    <div class="card-body p-4">
+                        <ul class="nav nav-pills nav-fill mb-4" id="profile-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="profile-overview-tab" data-bs-toggle="pill" data-bs-target="#profile-overview" type="button" role="tab" aria-controls="profile-overview" aria-selected="true">
+                                    Tổng quan
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-edit-tab" data-bs-toggle="pill" data-bs-target="#profile-edit" type="button" role="tab" aria-controls="profile-edit" aria-selected="false">
+                                    Chỉnh sửa hồ sơ
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-password-tab" data-bs-toggle="pill" data-bs-target="#profile-change-password" type="button" role="tab" aria-controls="profile-change-password" aria-selected="false">
+                                    Thay đổi mật khẩu
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="profile-tabContent">
+                            <!-- Overview Tab -->
+                            <div class="tab-pane fade show active" id="profile-overview" role="tabpanel" aria-labelledby="profile-overview-tab">
+                                <div class="row mb-3">
+                                    <div class="col-md-4 fw-bold text-secondary">Họ và tên:</div>
+                                    <div class="col-md-8">Phan Đức Nhật</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4 fw-bold text-secondary">Số điện thoại:</div>
+                                    <div class="col-md-8">0856456789</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4 fw-bold text-secondary">Email:</div>
+                                    <div class="col-md-8">phannhat@gmail.com</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4 fw-bold text-secondary">Địa chỉ:</div>
+                                    <div class="col-md-8">Hà Tĩnh</div>
+                                </div>
+                            </div>
+
+                            <!-- Edit Profile Tab -->
+                            <div class="tab-pane fade" id="profile-edit" role="tabpanel" aria-labelledby="profile-edit-tab">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label fw-bold text-secondary">Tên tài khoản</label>
+                                        <input type="text" class="form-control" id="username" value="Phan Nhat">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fullName" class="form-label fw-bold text-secondary">Họ và tên</label>
+                                        <input type="text" class="form-control" id="fullName" value="Phan Đức Nhật">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label fw-bold text-secondary">Số điện thoại</label>
+                                        <input type="number" class="form-control" id="phone" value="0856456789">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-bold text-secondary">Email</label>
+                                        <input type="email" class="form-control" id="email" value="user@gmail.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label fw-bold text-secondary">Đại chỉ</label>
+                                        <input type="text" class="form-control" id="address" value="Hà Tĩnh">
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Change Password Tab -->
+                            <div class="tab-pane fade" id="profile-change-password" role="tabpanel" aria-labelledby="profile-password-tab">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="currentPassword" class="form-label fw-bold text-secondary">Mật khẩu hiện tại</label>
+                                        <input type="password" class="form-control" id="currentPassword">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="newPassword" class="form-label fw-bold text-secondary">Mật khẩu mới</label>
+                                        <input type="password" class="form-control" id="newPassword">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="renewPassword" class="form-label fw-bold text-secondary">Nhập lại mật khẩu mới</label>
+                                        <input type="password" class="form-control" id="renewPassword">
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Thay đổi mật khẩu</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->

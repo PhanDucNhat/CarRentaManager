@@ -1,0 +1,45 @@
+﻿@using Project_CarRental.Models;
+@using Project_CarRental.Utilities;
+@model IList<Post>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            @foreach (var item in Model)
+            {
+                string url = Functions.TitleSlugGeneration("post", item.Title, item.PostID);
+                <div class="col-md-12 text-center d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end mb-md-5">
+                        <a href="blog-single.html" class="block-20 img" style="background-image: url(@item.Images);">
+                        </a>
+                        <div class="text px-md-5 pt-4">
+                            <div class="meta mb-3">
+                                <div>@item.CreateDate.Value.ToString("dd-MM-yyyy")</div>
+                                <div>@item.Author</div>
+                                <div><span class="icon-chat"></span> 3</div>
+                            </div>
+                            <h3 class="heading mt-2"><a href="/@url">@item.Title</a></h3>
+                            <p>@item.Abstract</p>
+                            <p><a href="/@url" class="btn btn-primary">Xem thêm <span class="icon-long-arrow-right"></span></a></p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        <li><a href="#">&lt;</a></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+﻿@using Project_CarRental.Models;
+@model IList<About>
+
+@foreach (var item in Model)
+{
+	<section class="ftco-section ftco-about">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(@item.Images);">
+				</div>
+				<div class="col-md-6 wrap-about ftco-animate">
+					<div class="heading-section heading-section-white pl-md-5">
+						<h2 class="mb-4">@item.Title</h2>
+						<p class="text-justify">@item.Contents</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+}

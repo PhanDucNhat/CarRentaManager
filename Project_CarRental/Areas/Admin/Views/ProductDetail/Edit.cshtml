@@ -1,0 +1,115 @@
+﻿@model Project_CarRental.Models.ProductDetail
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+	<div class="pagetitle">
+		<h2>Xác nhận sửa thông tin xe</h2>
+	</div>
+	<div class="container shadow p-5">
+		<div class="row pb-2">
+			<h2>Sửa thông tin xe</h2>
+		</div>
+		<form method="post" asp-action="Edit">
+			<div asp-validation-summary="All"></div>
+			<div class="form-row">
+				<input type="text" class="form-control mb-3" asp-for="ProductDetailID" type="hidden">
+				<div class="form-group col-md-6 mt-2">
+					<div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+					<label asp-for="ProductID">Thuộc mục</label>
+					<select asp-for="ProductID"
+							class="form-control"
+							asp-items="@(new SelectList(ViewBag.mnList,"Value","Text"))">
+					</select>
+				</div>
+				<div class="form-btn-group col-md-6">
+					<label class="control-label">Ảnh</label>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<button class="btn btn-success" type="button" onclick="openDialog()">Choose a pic</button>
+						</div>
+						<input type="text" class="form-control" asp-for="Images" id="file-input" aria-describedby="button-addon2">
+					</div>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Seats">Số ghế</label>
+					<select asp-for="Seats" class="form-select" id="Seats">
+						<option value="1">4</option>
+						<option value="2">7</option>
+						<option value="3">9</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Mileage">Số dặm</label>
+					<input type="text" class="form-control mb-3" asp-for="Mileage" placeholder="Nhập số dặm">
+					<span asp-validation-for="Mileage" class="alert-danger"></span>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Transmission">Động cơ</label>
+					<select asp-for="Transmission" class="form-select" id="Transmission">
+						<option value="Tự động">Tự động</option>
+						<option value="Số sàn">Số sàn</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Color">Màu xe</label>
+					<select asp-for="Color" class="form-select" id="Color">
+						<option value="Đỏ">Đỏ</option>
+						<option value="Đen">Đen</option>
+						<option value="Xanh dương">Xanh dương</option>
+						<option value="Trắng">Trắng</option>
+						<option value="Xám">Xám</option>
+						<option value="Vàng">Vàng</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Fuel">Nhiên liệu</label>
+					<select asp-for="Fuel" class="form-select" id="Fuel">
+						<option value="Xăng">Xăng</option>
+						<option value="Dầu">Dầu</option>
+						<option value="Điện">Điện</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="PricesDay">Giá thuê ngày/VNĐ</label>
+					<input type="text" class="form-control mb-3" asp-for="PricesDay" placeholder="Nhập giá thuê ngày">
+					<span asp-validation-for="PricesDay" class="alert-danger"></span>
+				</div>
+				<div class="form-group mt-2 mb-3">
+					<label>
+						@Html.CheckBox("IsActive", false)
+						Hiển thị
+					</label>
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="Description" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="OverTime" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="ExceedKm" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="OverNight" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="Holiday" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="LongRoad" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="PricesHour" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="PricesMonth" class="form-control" readonly />
+				</div>
+			</div>
+			<a href="javascript:history.back()" class="btn btn-lg btn-warning p2 mr5"><i class="bi bi-arrow-left-circle"></i>Quay lại</a>
+			<button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Lưu lại</button>
+		</form>
+	</div>
+</main>

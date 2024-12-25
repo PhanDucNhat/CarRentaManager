@@ -1,0 +1,59 @@
+﻿@model Project_CarRental.Models.User
+
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+	<div class="pagetitle">
+		<h2>Xác nhận sửa người dùng</h2>
+	</div>
+	<div class="container shadow p-5">
+		<div class="row pb-2">
+			<h2>Sửa người dùng</h2>
+		</div>
+		<form method="post" asp-action="Edit">
+			<div asp-validation-summary="All"></div>
+			<div class="form-row">
+				<input type="text" class="form-control mb-3" asp-for="UserID" type="hidden">
+				<div class="form-group col-md-6">
+					<label asp-for="FullName">Họ và tên</label>
+					<input type="text" class="form-control mb-3" asp-for="FullName" readonly>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Email">Email</label>
+					<input type="text" class="form-control mb-3" asp-for="Email" readonly>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Address">Địa chỉ</label>
+					<input type="text" class="form-control mb-3" asp-for="Address" readonly></input>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="Phone">Số điện thoại</label>
+					<input type="text" class="form-control mb-3" asp-for="Phone" readonly></input>
+				</div>
+				<div class="form-group col-md-6">
+					<label asp-for="CreateDate">Ngày tạo</label>
+					<input type="text" class="form-control mb-3" asp-for="CreateDate" readonly>
+				</div>
+				<div class="form-group mt-2 mb-3">
+					<label>
+						@Html.CheckBox("IsActive", false)
+						Hiển thị
+					</label>
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="Username" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="Password" class="form-control" readonly />
+				</div>
+				<div class="form-group d-none">
+					<input asp-for="Avatar" class="form-control" readonly />
+				</div>
+			</div>
+			<a href="javascript:history.back()" class="btn btn-lg btn-warning p2 mr5"><i class="bi bi-arrow-left-circle"></i>Quay lại</a>
+			<button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Lưu lại</button>
+		</form>
+	</div>
+</main>

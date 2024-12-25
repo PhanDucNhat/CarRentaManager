@@ -1,0 +1,312 @@
+﻿@model Project_CarRental.Models.ViewProduct;
+
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+			<div class="col-md-9 ftco-animate pb-5">
+				<p class="breadcrumbs"><span class="mr-2"><a href="@Url.Action("Index","Home")">Trang chủ <i class="ion-ios-arrow-forward"></i></a></span> <span>Xe <i class="ion-ios-arrow-forward"></i></span></p>
+				<h1 class="mb-3 bread">Chi tiết xe</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="ftco-section ftco-car-details" style="padding: 2em 0;">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12">
+				<div class="car-details">
+					<div class="img rounded" style="background-image: url(@Html.Raw(Model.Images));"></div>
+					<div class="text text-center">
+						<h2>@Html.DisplayFor(model => model.CarName)</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-dashboard"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Số dặm
+									<span>@Html.Raw(Model.Mileage)</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Truyền động
+									<span>@Html.Raw(Model.Transmission)</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Số chỗ ngồi
+									<span>@Html.Raw(Model.Seats)</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-backpack"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Màu
+									<span>@Html.Raw(Model.Color)</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services">
+					<div class="media-body py-md-4">
+						<div class="d-flex mb-3 align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
+							<div class="text">
+								<h3 class="heading mb-0 pl-3">
+									Nhiên liệu
+									<span>@Html.Raw(Model.Fuel)</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 pills">
+				<div class="bd-example bd-example-tabs">
+					<div class="d-flex justify-content-center">
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+							<li class="nav-item">
+								<a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Tiện nghi</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Mô tả</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-expanded="true">Đánh giá</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+							<div class="row">
+								<div class="col-md-4">
+									<ul class="features">
+										<li class="check"><span class="ion-ios-checkmark"></span>Bản đồ</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Camera hành trình</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>GPS</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Cảnh báo tốc độ</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Màn hình DVD</li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="features">
+										<li class="check"><span class="ion-ios-checkmark"></span>Bluetooth</li>
+										<li class="remove"><span class="ion-ios-close"></span>Camera lùi</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Ghế trẻ em</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Camera 360</li>
+										<li class="remove"><span class="ion-ios-close"></span>Cảm biến lốp</li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="features">
+										<li class="check"><span class="ion-ios-checkmark"></span>Khe cắm USB</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Túi khí an toàn</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Cảm biến va chạm</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Lốp dự phòng</li>
+										<li class="check"><span class="ion-ios-checkmark"></span>Camera cập lề</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
+							<p class=" text-justify">@Html.Raw(Model.Description)</p>
+						</div>
+
+						<div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+							<div class="row">
+								@await Component.InvokeAsync("EvaluateProduct", Model.ProductID)
+								<div class="col-md-5">
+									<div class="rating-wrap">
+										<h3 class="head">Đánh giá tổng quan</h3>
+										<div class="wrap">
+											<p class="star">
+												<span>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													(98%)
+												</span>
+												<span>20 đánh giá</span>
+											</p>
+											<p class="star">
+												<span>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													(85%)
+												</span>
+												<span>10 đánh giá</span>
+											</p>
+											<p class="star">
+												<span>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													(70%)
+												</span>
+												<span>5 đánh giá</span>
+											</p>
+											<p class="star">
+												<span>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													(10%)
+												</span>
+												<span>0 đánh giá</span>
+											</p>
+											<p class="star">
+												<span>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													<i class="ion-ios-star"></i>
+													(0%)
+												</span>
+												<span>0 đánh giá</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-section" style="padding: 2em 0;">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+				<h2 class="mb-2">Đặt xe</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				@if (TempData["ErrorMessage"] != null)
+				{
+					<div class="alert alert-danger text-center">
+						@TempData["ErrorMessage"]
+					</div>
+				}
+				@if (TempData["SuccessMessage"] != null)
+				{
+					<div class="alert alert-success text-center">
+						@TempData["SuccessMessage"]
+					</div>
+				}
+				<form action="@Url.Action("BookCar", "Rental")" method="post" class="request-form ftco-animate bg-primary">
+					<h2 class="text-center">Chuyến đi của bạn</h2>
+
+					<!-- Hidden field for ProductID -->
+					<input type="hidden" name="ProductID" value="@Model.ProductID" />
+
+					<div class="form-group">
+						<label for="" class="label">Địa điểm đón</label>
+						<input type="text" name="pickup_location" class="form-control" placeholder="Thành phố, sân bay, nhà ga, etc" required>
+					</div>
+					<div class="form-group">
+						<label for="" class="label">Địa điểm trả</label>
+						<input type="text" name="dropoff_location" class="form-control" placeholder="Thành phố, sân bay, nhà ga, etc" required>
+					</div>
+					<div class="d-flex">
+						<div class="form-group mr-2">
+							<label for="" class="label">Ngày đón</label>
+							<input type="date" name="pick_up_date" class="form-control" required>
+						</div>
+						<div class="form-group ml-2">
+							<label for="" class="label">Ngày trả</label>
+							<input type="date" name="drop_off_date" class="form-control" required>
+						</div>
+						<div class="form-group ml-2">
+							<label for="" class="label">Thời gian đón</label>
+							<input type="time" name="pick_up_time" class="form-control" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Đặt xe ngay bây giờ" class="btn btn-secondary py-3 px-4">
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-4">
+				<div class="categories">
+					<h3 style="text-align: center;">Phí & phụ phí</h3>
+					<ul>
+						<li>Thuê giờ <span style="float: right; font-weight: bold;">@Html.Raw(Model.PricesHour) vnd</span></li>
+						<li>Thuê ngày <span style="float: right; font-weight: bold;">@Html.Raw(Model.PricesDay) vnd</span></li>
+						<li>Thuê tháng <span style="float: right; font-weight: bold;">@Html.Raw(Model.PricesMonth) vnd</span></li>
+						<li>Ngoài giờ <span style="float: right; font-weight: bold;">@Html.Raw(Model.OverTime) vnd/giờ</span></li>
+						<li>Vượt cây số <span style="float: right; font-weight: bold;">@Html.Raw(Model.ExceedKm) vnd/km</span></li>
+						<li>Lưu đêm <span style="float: right; font-weight: bold;">@Html.Raw(Model.OverNight) vnd/đêm</span></li>
+						<li>Chủ nhật-ngày lễ <span style="float: right; font-weight: bold;">@Html.Raw(Model.Holiday) vnd/ngày</span></li>
+						<li>Đường dài <span style="float: right; font-weight: bold;">@Html.Raw(Model.LongRoad)</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+@await Component.InvokeAsync("ViewProduct")
+
+@await Component.InvokeAsync("SimilarCar")

@@ -1,0 +1,71 @@
+﻿@model IList<Rental>
+
+<section class="menu-spacing" style="height: 120px; background-color: #1e3a8a;"></section>
+
+<section class="ftco-section" style="padding: 2em 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <h2 class="mb-2">Lịch sử đặt xe</h2>
+            </div>
+        </div>
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger text-center">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success text-center">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-md-12">
+                @if (Model.Any())
+                {
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Địa điểm đón</th>
+                                <th>Địa điểm trả</th>
+                                <th>Ngày đón</th>
+                                <th>Ngày trả</th>
+                                <th>Thời gian đón</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var rental in Model)
+                            {
+                                <tr>
+                                    <td>@rental.PickUpLocation</td>
+                                    <td>@rental.DropOffLocation</td>
+                                    <td>@(rental.PickUpDate.HasValue ? rental.PickUpDate.Value.ToString("dd/MM/yyyy") : "")</td>
+                                    <td>@(rental.DropOffDate.HasValue ? rental.DropOffDate.Value.ToString("dd/MM/yyyy") : "")</td>
+                                    <td>@(rental.PickUpTime.HasValue ? rental.PickUpTime.Value.ToString(@"hh\:mm") : "")</td>
+                                    <td>
+                                        <span class="badge badge-@(rental.Status == "Chờ xác nhận" ? "warning" :
+                                                                   rental.Status == "Đã xác nhận" ? "success" :
+                                                                   rental.Status == "Đã hủy" ? "danger" :
+                                                                   rental.Status == "Hoàn thành" ? "primary" : "secondary")">
+                                            @rental.Status
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="text-center">Bạn chưa có lịch sử đặt xe.</p>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+

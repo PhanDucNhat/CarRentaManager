@@ -1,0 +1,81 @@
+﻿@using Project_CarRental.Models;
+@using Project_CarRental.Utilities;
+@model IList<ViewProduct>
+
+<section class="ftco-section ftco-cart" style="padding: 2em 0;">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+				<h2 class="mb-2">Xe tương tự</h2>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 ftco-animate">
+					<div class="car-list">
+						<table class="table">
+							<thead class="thead-primary">
+								<tr class="text-center">
+									<th>&nbsp;</th>
+									<th>&nbsp;</th>
+									<th class="bg-primary heading">Tỉ lệ mỗi giờ</th>
+									<th class="bg-dark heading">Tỉ lệ mỗi ngày</th>
+									<th class="bg-black heading">Tỉ lệ mỗi tháng</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+									<tr class="">
+										<td class="car-image"><div class="img" style="background-image:url(@item.Images);"></div></td>
+										<td class="product-name">
+											<h3>@item.CarName</h3>
+											<p class="mb-0 rated">
+												<span>Đánh giá:</span>
+												<span>
+													@for (int i = 0; i < @item.RangeStar; i++)
+													{
+														<i class="fa-solid fa-star" style="color: #01d28e;"></i>
+													}
+												</span>
+											</p>
+										</td>
+
+										<td class="price" style="pointer-events: none;">
+											<!--<p class="btn-custom"><a href="#">Rent a car</a></p>-->
+											<div class="price-rate">
+												<h3>
+													<span class="num">@item.PricesHour vnd/giờ</span>
+												</h3>
+												<span class="subheading">Phụ phí nhiên liệu @item.OverTime vnd</span>
+											</div>
+										</td>
+
+										<td class="price" style="pointer-events: none;">
+											<!--<p class="btn-custom"><a href="#">Rent a car</a></p>-->
+											<div class="price-rate">
+												<h3>
+													<span class="num">@item.PricesDay vnd/ngày</span>
+												</h3>
+												<span class="subheading">Phụ phí nhiên liệu @item.OverTime vnd</span>
+											</div>
+										</td>
+
+										<td class="price" style="pointer-events: none;">
+											<!--<p class="btn-custom"><a href="#">Rent a car</a></p>-->
+											<div class="price-rate">
+												<h3>
+													<span class="num">@item.PricesMonth vnd/tháng</span>
+												</h3>
+												<span class="subheading">Phụ phí nhiên liệu @item.OverTime vnd</span>
+											</div>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>

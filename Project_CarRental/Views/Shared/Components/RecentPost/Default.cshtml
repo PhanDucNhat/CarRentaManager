@@ -1,0 +1,22 @@
+﻿@using Project_CarRental.Models;
+@using Project_CarRental.Utilities;
+@model IList<Post>
+
+<div class="sidebar-box ftco-animate">
+    <h3>Tin tức</h3>
+    @foreach (var item in Model)
+    {
+        string url = Functions.TitleSlugGeneration("post", item.Title, item.PostID);
+        <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(@item.Images);"></a>
+            <div class="text">
+                <h3 class="heading"><a href="/@url">@item.Title</a></h3>
+                <div class="meta">
+                    <div><span class="icon-calendar"></span>@item.CreateDate.Value.ToString("dd-MM-yyyy")</div>
+                    <div><span class="icon-person"></span>@item.Author</div>
+                    <div><span class="icon-chat"></span>3</div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

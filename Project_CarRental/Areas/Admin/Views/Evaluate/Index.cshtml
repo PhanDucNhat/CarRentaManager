@@ -1,0 +1,56 @@
+﻿@using Project_CarRental.Models;
+@model IList<ViewEvaluate>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Danh sách đánh giá</h2>
+    </div>
+
+
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+                    <div class="card-body mt-4">
+                        <table class="table table-borderless datatable">
+                            <thead>
+                                <tr>
+                                    <th class="col-1 text-center">#</th>
+                                    <th class="col-2 text-center">Tên xe</th>
+                                    <th class="col-2 text-center">Họ và tên</th>
+                                    <th class="col-2 text-center">Đánh giá</th>
+                                    <th class="col-2 text-center">Ngày đánh giá</th>
+                                    <th class="col-1 text-center">RangeStar</th>
+                                    <th class="col-1 text-center">Ẩn/Hiện</th>
+                                    <th class="col-1 text-center">Chức năng</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th class="text-center" scope="row">@item.EvaluateID</th>
+                                        <td><a asp-area="Admin" asp-controller="Evaluate" asp-action="Details" asp-route-id="@item.EvaluateID" class="text-primary">@item.CarName</a></td>
+                                        <td class="text-center">@item.FullName</td>
+                                        <td class="text-center">@item.Abstract</td>
+                                        <td class="text-center">@item.CreateDate.Value.ToString("dd-MM-yyyy")</td>
+                                        <td class="text-center">@item.RangeStar</td>
+                                        <td class="text-center">@item.IsActive</td>
+                                        <td class="text-center">
+                                            <a asp-area="Admin" asp-controller="Evaluate" asp-action="Edit" asp-route-id="@item.EvaluateID" class="btn btn-primary btn-sm" title="Cập nhật đánh giá"><i class="bi bi-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

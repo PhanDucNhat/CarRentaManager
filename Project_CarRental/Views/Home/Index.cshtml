@@ -1,0 +1,156 @@
+﻿<div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+            <div class="col-lg-8 ftco-animate">
+                <div class="text w-100 text-center mb-md-5 pb-md-5">
+                    <h1 class="mb-4">VÌ CHUYẾN ĐI CỦA BẠN</h1>
+                    <p style="font-size: 18px;">Thế giới đang đợi bạn khám phá, và chiếc xe hoàn hảo của chúng tôi sẽ là người bạn đồng hành lý tưởng trên mọi địa hình</p>
+                    <a href="https://www.youtube.com/watch?v=nejlAUY5gEw" class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="ion-ios-play"></span>
+                        </div>
+                        <div class="heading-title ml-5">
+                            <span>Dịch vụ xe ô tô đẳng cấp - Trải nghiệm đi lại tốt nhất</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-no-pt bg-light">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-12	featured-top">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <form action="#" class="request-form ftco-animate bg-primary">
+                            <h2 style="text-align: center;">Chuyến đi của bạn</h2>
+                            <div class="form-group">
+                                <label for="" class="label">Địa điểm đón</label>
+                                <input type="text" class="form-control" placeholder="Thành phố, sân bay, nhà gia, etc">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="label">Địa điểm trả</label>
+                                <input type="text" class="form-control" placeholder="Thành phố, sân bay, nhà gia, etc">
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-group mr-2">
+                                    <label for="" class="label">Ngày đón</label>
+                                    <input type="text" class="form-control" id="book_pick_date" placeholder="Ngày">
+                                </div>
+                                <div class="form-group ml-2">
+                                    <label for="" class="label">Ngày trả</label>
+                                    <input type="text" class="form-control" id="book_off_date" placeholder="Ngày">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="label">Thời gian đón</label>
+                                <input type="text" class="form-control" id="time_pick" placeholder="Thời gian">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Đặt xe ngay bây giờ" class="btn btn-secondary py-3 px-4">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center">
+                        <div class="services-wrap rounded-right w-100">
+                            <h3 class="heading-section mb-4" style="text-align: center;">Cách tốt nhất để thuê những chiếc xe hoàn hảo</h3>
+                            <div class="row d-flex mb-4">
+                                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Địa điểm lấy xe</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Ưu đãi tốt nhất</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Đặt thuê xe</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="text-align:center;">
+                                <p><span class="btn btn-primary py-3 px-4" style="cursor: default;">Đặt ngay chiếc xe hoàn hảo cho bạn</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@await Component.InvokeAsync("About")
+
+@await Component.InvokeAsync("ViewProduct")
+
+<section class="ftco-section ftco-intro" style="background-image: url(images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6 heading-section heading-section-white ftco-animate">
+                <h2 class="mb-3">Làm cho mỗi chuyến đi trở nên đặc biệt</h2>
+                <a class="btn btn-primary btn-lg">Trải nghiệm tốt nhất</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@await Component.InvokeAsync("Post")
+
+@await Component.InvokeAsync("ViewEvaluate")
+
+<section class="ftco-counter ftco-section img bg-light" id="section-counter">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text text-border d-flex align-items-center">
+                        <strong class="number" data-number="60">0</strong>
+                        <span>Năm <br>kinh nghiệm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text text-border d-flex align-items-center">
+                        <strong class="number" data-number="34">0</strong>
+                        <span>Tổng số <br>xe</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text text-border d-flex align-items-center">
+                        <strong class="number" data-number="2590">0</strong>
+                        <span>Khách hàng <br>hài lòng</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                    <div class="text d-flex align-items-center">
+                        <strong class="number" data-number="3">0</strong>
+                        <span>Tổng số <br>chi nhánh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
