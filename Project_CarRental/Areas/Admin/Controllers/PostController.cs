@@ -16,6 +16,8 @@ namespace Project_CarRental.Areas.Admin.Controllers
 		}
 		public IActionResult Index()
 		{
+            if (!Functions.IsLogin())
+                return RedirectToAction("Index", "Login");
             var mnList = (from p in _context.Posts
                           join m in _context.Menus on p.MenuID equals m.MenuID
                           orderby p.PostID

@@ -1,0 +1,72 @@
+﻿@using Project_CarRental.Models;
+@model IList<Rental>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Danh sách đặt xe</h2>
+    </div>
+
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+                    <div class="card-body mt-4">
+                        <table class="table table-borderless datatable">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th class="text-center">Tên khách hàng</th>
+                                    <th class="text-center">Số điện thoại</th>
+                                    <th class="text-center">Tên xe đặt</th>
+                                    <th class="text-center">Điểm đón</th>
+                                    <th class="text-center">Ngày đón</th>
+                                    <th class="text-center">Trạng thái</th>
+                                    <th class="text-center">Chức năng</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th class="text-center" scope="row">@item.RentalID</th>
+                                        <td>@item.FullName</td>
+                                        <td>@item.Phone</td>
+                                        <td><a asp-area="Admin" asp-controller="Rental" asp-action="Details" asp-route-id="@item.RentalID" class="text-primary">@item.CarName</a></td>
+                                        <td class="text-center">@item.PickUpLocation</td>
+                                        <td class="text-center">@item.PickUpDate?.ToString("dd/MM/yyyy")</td>
+                                        <td class="text-center">
+                                            @if (item.Status == "Chờ xác nhận")
+                                            {
+                                                <span class="badge bg-warning text-dark">Chờ xác nhận</span>
+                                            }
+                                            else if (item.Status == "Đã xác nhận")
+                                            {
+                                                <span class="badge bg-primary">Đã xác nhận</span>
+                                            }
+                                            else if (item.Status == "Hoàn thành")
+                                            {
+                                                <span class="badge bg-success">Hoàn thành</span>
+                                            }
+                                            else if (item.Status == "Đã hủy")
+                                            {
+                                                <span class="badge bg-danger">Đã hủy</span>
+                                            }
+                                        </td>
+                                        <td class="text-center">
+                                            <a asp-area="Admin" asp-controller="Rental" asp-action="Detail" asp-route-id="@item.RentalID" class="btn btn-info btn-sm" title="Thông tin chi tiết"><i class="bi bi-info-circle"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

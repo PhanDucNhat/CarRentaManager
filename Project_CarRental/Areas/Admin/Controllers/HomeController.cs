@@ -8,8 +8,8 @@ namespace Project_CarRental.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            //if (!Functions.IsLogin())
-                //return RedirectToAction("Index", "Login");
+            if (!Functions.IsLogin())
+                return RedirectToAction("Index", "Login");
             return View();
         }
         public IActionResult Logout()

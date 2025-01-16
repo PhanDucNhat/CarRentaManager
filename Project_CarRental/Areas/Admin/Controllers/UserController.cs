@@ -16,7 +16,9 @@ namespace Project_CarRental.Areas.Admin.Controllers
 		}
 		public IActionResult Index()
 		{
-			var mnList = _context.Users.OrderBy(m => m.UserID).ToList();
+            if (!Functions.IsLogin())
+                return RedirectToAction("Index", "Login");
+            var mnList = _context.Users.OrderBy(m => m.UserID).ToList();
 			return View(mnList);
 		}
 

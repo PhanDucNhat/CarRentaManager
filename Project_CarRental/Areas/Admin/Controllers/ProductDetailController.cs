@@ -18,6 +18,8 @@ namespace Project_CarRental.Areas.Admin.Controllers
 		}
 		public IActionResult Index()
 		{
+            if (!Functions.IsLogin())
+                return RedirectToAction("Index", "Login");
             var mnList = (from p in _context.ProductDetails
                           join m in _context.Products on p.ProductID equals m.ProductID
                           orderby p.ProductDetailID

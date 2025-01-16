@@ -27,6 +27,7 @@
 
             // Not yet implemented commands in elFinder.NetCore
             var disabled = ['callback', 'chmod', 'editor', 'netmount', 'ping', 'search', 'zipdl', 'help'];
+
             elFinder.prototype.i18.en.messages.TextArea = "Edit";
 
             $.each(disabled, function (i, cmd) {
@@ -36,11 +37,22 @@
             var options = {
                 baseUrl: "@Url.Content("~/admin/lib/elFinder/")",
                 url: "@Url.Action("Connector")",
-                //baseUrl: "/Admin/lib/elFinder/",
-                //url: "/Admin/el-finder-file-system/connector",
                 rememberLastDir: false,
                 commands: myCommands,
                 lang: 'en',
+                getFileCallback: function (file) {
+                    // Lấy URL của file và đóng cửa sổ
+                    var filePath = file.url;
+                    // Gửi đường dẫn về parent window nếu có
+                    if (window.opener) {
+                        window.opener.document.getElementById('ImagePath').value = filePath;
+                        window.close();
+                    } else {
+                        // Nếu không phải popup, có thể xử lý trực tiếp
+                        console.log("File path:", filePath);
+                        // Thêm code để xử lý đường dẫn ở đây
+                    }
+                },
                 uiOptions: {
                     toolbar: [
                         ['back', 'forward'],
@@ -57,10 +69,9 @@
                         ['selectall', 'selectnone', 'selectinvert'],
                         ['view', 'sort']
                     ]
-                },
-                //onlyMimes: ["image", "text/plain"] // Get files of requested mime types only
-                lang: 'en',
+                }
             };
+
             $('#elfinder').elfinder(options).elfinder('instance');
         });
     </script>

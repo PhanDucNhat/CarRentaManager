@@ -1,18 +1,163 @@
-﻿<main id="main" class="main">
+﻿<style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .pagetitle {
+            margin-bottom: 20px;
+        }
+        .chart {
+            height: 300px;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+    </style>
+
+<main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Tổng quan</h1>
+        <h1>Thống kê Dịch vụ Cho thuê Xe Ô tô</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Thống kê</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
         <div class="row">
-            <h1 style="color: red;">Chào mừng bạn đến với trang quản trị dịch vụ cho thuê xe ô tô</h1>
+
+            <!-- Tổng quan -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Tổng số xe</h5>
+                        <p class="card-text display-4">120</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Xe đang thuê</h5>
+                        <p class="card-text display-4">75</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Doanh thu tháng</h5>
+                        <p class="card-text display-4">50M</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Đánh giá</h5>
+                        <p class="card-text display-4">4.8 <i class="fas fa-star text-warning"></i></p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Biểu đồ doanh thu -->
+        <div class="row mt-4">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Biểu đồ Doanh thu</h5>
+                        <div class="chart" id="revenueChart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tỷ lệ thuê xe</h5>
+                        <div class="chart" id="rentalRateChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bảng thống kê chi tiết -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bảng chi tiết xe</h5>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Biển số</th>
+                                    <th>Loại xe</th>
+                                    <th>Tình trạng</th>
+                                    <th>Giá thuê (VND/ngày)</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>30E-12345</td>
+                                    <td>Sedan</td>
+                                    <td><span class="badge bg-success">Đang thuê</span></td>
+                                    <td>1,000,000</td>
+                                    <td><button class="btn btn-primary btn-sm">Chi tiết</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>29A-67890</td>
+                                    <td>SUV</td>
+                                    <td><span class="badge bg-danger">Bảo dưỡng</span></td>
+                                    <td>1,500,000</td>
+                                    <td><button class="btn btn-primary btn-sm">Chi tiết</button></td>
+                                </tr>
+                                <!-- Thêm nhiều hàng hơn nếu cần -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
-</main><!-- End #main -->
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.36.0/apexcharts.min.js"></script>
+<script>
+    // Biểu đồ doanh thu
+    var revenueOptions = {
+        chart: { type: 'line' },
+        series: [
+            { name: 'Doanh thu', data: [10, 20, 15, 25, 30, 40, 35] }
+        ],
+        xaxis: { categories: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7'] }
+    };
+    var revenueChart = new ApexCharts(document.querySelector("#revenueChart"), revenueOptions);
+    revenueChart.render();
+
+    // Biểu đồ tỷ lệ thuê xe
+    var rentalRateOptions = {
+        chart: { type: 'pie' },
+        series: [75, 25],
+        labels: ['Đang thuê', 'Có sẵn']
+    };
+    var rentalRateChart = new ApexCharts(document.querySelector("#rentalRateChart"), rentalRateOptions);
+    rentalRateChart.render();
+</script>

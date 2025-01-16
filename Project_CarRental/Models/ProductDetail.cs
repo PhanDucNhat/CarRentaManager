@@ -16,14 +16,14 @@ namespace Project_CarRental.Models
         public string? Color { get; set; }
         public string? Fuel { get; set; }
         public string? Description { get; set; }
-        public int OverTime { get; set; }
-        public int ExceedKm { get; set; }
-        public int OverNight { get; set; }
-        public int Holiday { get; set; }
+        public decimal? OverTime { get; set; }
+        public decimal? ExceedKm { get; set; }
+        public decimal? OverNight { get; set; }
+        public decimal? Holiday { get; set; }
         public string? LongRoad { get; set; }
-        public int PricesHour { get; set; }
-        public int PricesDay { get; set; }
-        public int PricesMonth { get; set; }
+        public decimal? PricesHour { get; set; }
+        public decimal? PricesDay { get; set; }
+        public decimal? PricesMonth { get; set; }
         public bool? IsActive { get; set; }
 
         [NotMapped]

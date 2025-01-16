@@ -1,4 +1,5 @@
-﻿@model IList<Rental>
+﻿@using Project_CarRental.Utilities
+@model IList<Rental>
 
 <section class="menu-spacing" style="height: 120px; background-color: #1e3a8a;"></section>
 
@@ -6,59 +7,102 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-                <h2 class="mb-2">Lịch sử đặt xe</h2>
+                <h2 class="mb-2" style="color: #343a40;">Lịch sử đặt xe</h2>
             </div>
         </div>
-        @if (TempData["ErrorMessage"] != null)
-        {
-            <div class="alert alert-danger text-center">
-                @TempData["ErrorMessage"]
+
+        <!-- Form lọc -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <form method="get" class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Từ ngày</label>
+                        <input type="date" name="filterFromDate" class="form-control" value="@Context.Request.Query["filterFromDate"]">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Đến ngày</label>
+                        <input type="date" name="filterToDate" class="form-control" value="@Context.Request.Query["filterToDate"]">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Trạng thái</label>
+                        <select name="filterStatus" class="form-control">
+                            <option value="">Tất cả</option>
+                            @{
+                                var currentStatus = Context.Request.Query["filterStatus"].ToString();
+                                var statuses = new[] { "Chờ xác nhận", "Đã xác nhận", "Đã hủy", "Hoàn thành" };
+                                foreach (var status in statuses)
+                                {
+                                    if (status == currentStatus)
+                                    {
+                                        <option value="@status" selected>@status</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@status">@status</option>
+                                    }
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">&nbsp;</label>
+                        <div>
+                            <button type="submit" class="btn btn-primary px-4 py-2 me-2 fw-bold">Lọc</button>
+                            <a href="@Url.Action("History")" class="btn btn-secondary px-4 py-2 fw-bold">Đặt lại</a>
+                        </div>
+                    </div>
+                </form>
             </div>
-        }
-        @if (TempData["SuccessMessage"] != null)
-        {
-            <div class="alert alert-success text-center">
-                @TempData["SuccessMessage"]
-            </div>
-        }
+        </div>
 
         <div class="row">
             <div class="col-md-12">
                 @if (Model.Any())
                 {
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Địa điểm đón</th>
-                                <th>Địa điểm trả</th>
-                                <th>Ngày đón</th>
-                                <th>Ngày trả</th>
-                                <th>Thời gian đón</th>
-                                <th>Trạng thái</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var rental in Model)
-                            {
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered datatable" style="background-color: #ffffff;">
+                            <thead style="background-color: #1e3a8a; color: white;">
                                 <tr>
-                                    <td>@rental.PickUpLocation</td>
-                                    <td>@rental.DropOffLocation</td>
-                                    <td>@(rental.PickUpDate.HasValue ? rental.PickUpDate.Value.ToString("dd/MM/yyyy") : "")</td>
-                                    <td>@(rental.DropOffDate.HasValue ? rental.DropOffDate.Value.ToString("dd/MM/yyyy") : "")</td>
-                                    <td>@(rental.PickUpTime.HasValue ? rental.PickUpTime.Value.ToString(@"hh\:mm") : "")</td>
-                                    <td>
-                                        <span class="badge badge-@(rental.Status == "Chờ xác nhận" ? "warning" :
-                                                                   rental.Status == "Đã xác nhận" ? "success" :
-                                                                   rental.Status == "Đã hủy" ? "danger" :
-                                                                   rental.Status == "Hoàn thành" ? "primary" : "secondary")">
-                                            @rental.Status
-                                        </span>
-                                    </td>
+                                    <th class="text-center">Tên xe</th>
+                                    <th class="text-center">Địa điểm đón</th>
+                                    <th class="text-center">Địa điểm trả</th>
+                                    <th class="text-center">Ngày đón</th>
+                                    <th class="text-center">Ngày trả</th>
+                                    <th class="text-center">Tổng tiền</th>
+                                    <th class="text-center">Ngày đặt</th>
+                                    <th class="text-center">Trạng thái</th>
+                                    <th class="text-center">Hợp đồng</th>
                                 </tr>
-                            }
-
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    string slug = Functions.TitleSlugGeneration("product", item.CarName, item.ProductID);
+                                    string url = Url.Content($"~/{slug}");
+                                    <tr>
+                                        <td><a href="@url" class="text-primary" style="text-decoration: none;">@item.CarName</a></td>
+                                        <td class="text-center">@item.PickUpLocation</td>
+                                        <td class="text-center">@item.DropOffLocation</td>
+                                        <td class="text-center">@item.PickUpDate?.ToString("dd/MM/yyyy")</td>
+                                        <td class="text-center">@item.DropOffDate?.ToString("dd/MM/yyyy")</td>
+                                        <td class="text-center">@item.TotalAmount?.ToString("#,##0.000").Replace(".", ",")</td>
+                                        <td class="text-center">@item.CreateDate?.ToString("dd/MM/yyyy")</td>
+                                        <td class="text-center">
+                                            <span class="badge badge-@(item.Status == "Chờ xác nhận" ? "warning" :
+                                                                       item.Status == "Đã xác nhận" ? "success" :
+                                                                       item.Status == "Đã hủy" ? "danger" :
+                                                                       item.Status == "Hoàn thành" ? "primary" : "secondary")">
+                                                @item.Status
+                                            </span>
+                                        </td>
+                                        <td class="text-center">
+                                            <a asp-area="" asp-controller="Rental" asp-action="Contract" asp-route-id="@item.RentalID" class="btn btn-primary btn-sm" title="Hợp đồng"><i class="fas fa-file-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 }
                 else
                 {
@@ -68,4 +112,3 @@
         </div>
     </div>
 </section>
-

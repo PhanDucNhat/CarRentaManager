@@ -28,6 +28,7 @@
                                     <th class="col-3 text-center">Tên xe</th>
                                     <th class="col-2 text-center">Thuộc</th>
                                     <th class="col-2 text-center">Loại</th>
+                                    <th class="col-2 text-center">Trạng thái</th>
                                     <th class="col-2 text-center">Ẩn/Hiện</th>
                                     <th class="col-2 text-center">Chức năng</th>
                                 </tr>
@@ -41,6 +42,7 @@
                                         <td><a asp-area="Admin" asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductID" class="text-primary">@item.CarName</a></td>
                                         <td class="text-center">@item.MenuName</td>
                                         <td class="text-center">@item.Category</td>
+                                        <td class="text-center">@item.Status</td>
                                         <td class="text-center">@item.IsActive</td>
                                         <td class="text-center">
                                             <a asp-area="Admin" asp-controller="Product" asp-action="Edit" asp-route-id="@item.ProductID" class="btn btn-primary btn-sm" title="Sửa nội dung xe"><i class="bi bi-pencil"></i></a>

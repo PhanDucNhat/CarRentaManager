@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\views\\rental\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\views\\rental\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\views\\shared\\components\\menuview\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\views\\shared\\components\\menuview\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\views\\home\\detailsproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\views\\home\\detailsproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\areas\\admin\\controllers\\rentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\areas\\admin\\controllers\\rentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\controllers\\rentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\controllers\\rentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\component\\viewproductcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\component\\viewproductcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\models\\viewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\models\\viewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\views\\shared\\components\\similarcar\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\views\\shared\\components\\similarcar\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\views\\shared\\components\\evaluateproduct\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\views\\shared\\components\\evaluateproduct\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|e:\\hoc_ki_1.1_(2024-2025)\\thuc_tap_chuyen_nganh-nguyen_quang_ninh\\project_carrental\\project_carrental\\models\\viewevaluate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D158733-9E70-4484-8866-990873285525}|Project_CarRental\\Project_CarRental.csproj|solutionrelative:project_carrental\\models\\viewevaluate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,45 +54,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 554,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Service\\Index.cshtml",
-              "RelativeDocumentMoniker": "Project_CarRental\\Views\\Service\\Index.cshtml",
-              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Service\\Index.cshtml",
-              "RelativeToolTip": "Project_CarRental\\Views\\Service\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DetailsProduct.cshtml",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
+              "RelativeDocumentMoniker": "Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
+              "RelativeToolTip": "Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
+              "ViewState": "AgIAADgBAAAAAAAAAAAAAGMBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T16:35:56.267Z",
+              "WhenOpened": "2025-01-14T15:47:08.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "History.cshtml",
-              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Rental\\History.cshtml",
-              "RelativeDocumentMoniker": "Project_CarRental\\Views\\Rental\\History.cshtml",
-              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Rental\\History.cshtml",
-              "RelativeToolTip": "Project_CarRental\\Views\\Rental\\History.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Project_CarRental\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Project_CarRental\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T16:18:57.536Z",
+              "WhenOpened": "2025-01-14T15:26:53.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Shared\\Components\\MenuView\\Default.cshtml",
-              "RelativeDocumentMoniker": "Project_CarRental\\Views\\Shared\\Components\\MenuView\\Default.cshtml",
-              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Shared\\Components\\MenuView\\Default.cshtml",
-              "RelativeToolTip": "Project_CarRental\\Views\\Shared\\Components\\MenuView\\Default.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAcwEMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T15:00:16.088Z",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Project_CarRental\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Project_CarRental\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAowJMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T15:26:08.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RentalController.cs",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Areas\\Admin\\Controllers\\RentalController.cs",
+              "RelativeDocumentMoniker": "Project_CarRental\\Areas\\Admin\\Controllers\\RentalController.cs",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Areas\\Admin\\Controllers\\RentalController.cs",
+              "RelativeToolTip": "Project_CarRental\\Areas\\Admin\\Controllers\\RentalController.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAowH4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T15:20:15.267Z",
               "EditorCaption": ""
             },
             {
@@ -91,61 +116,87 @@
               "RelativeDocumentMoniker": "Project_CarRental\\Controllers\\RentalController.cs",
               "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Controllers\\RentalController.cs",
               "RelativeToolTip": "Project_CarRental\\Controllers\\RentalController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAcwFQAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T09:02:15.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Rental.cs",
-              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\Rental.cs",
-              "RelativeDocumentMoniker": "Project_CarRental\\Models\\Rental.cs",
-              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\Rental.cs",
-              "RelativeToolTip": "Project_CarRental\\Models\\Rental.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T02:29:46.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DetailsProduct.cshtml",
-              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
-              "RelativeDocumentMoniker": "Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
-              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
-              "RelativeToolTip": "Project_CarRental\\Views\\Home\\DetailsProduct.cshtml",
-              "ViewState": "AgIAANwAAAAAAAAAAAAcwOkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-23T14:55:29.222Z",
+              "WhenOpened": "2025-01-14T15:20:03.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Project_CarRental\\Controllers\\LoginController.cs",
-              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Project_CarRental\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCkAAAAAAAAAAAAAAA==",
+              "Title": "Product.cs",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Project_CarRental\\Models\\Product.cs",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\Product.cs",
+              "RelativeToolTip": "Project_CarRental\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T09:55:30.5Z",
+              "WhenOpened": "2025-01-14T15:19:56.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Program.cs",
-              "RelativeDocumentMoniker": "Project_CarRental\\Program.cs",
-              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Program.cs",
-              "RelativeToolTip": "Project_CarRental\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
+              "Title": "ViewProductComponent.cs",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Component\\ViewProductComponent.cs",
+              "RelativeDocumentMoniker": "Project_CarRental\\Component\\ViewProductComponent.cs",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Component\\ViewProductComponent.cs",
+              "RelativeToolTip": "Project_CarRental\\Component\\ViewProductComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T09:55:49.16Z",
+              "WhenOpened": "2025-01-14T14:57:58.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Shared\\Components\\SimilarCar\\Default.cshtml",
+              "RelativeDocumentMoniker": "Project_CarRental\\Views\\Shared\\Components\\SimilarCar\\Default.cshtml",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Shared\\Components\\SimilarCar\\Default.cshtml",
+              "RelativeToolTip": "Project_CarRental\\Views\\Shared\\Components\\SimilarCar\\Default.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAEwCMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T14:56:48.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Shared\\Components\\EvaluateProduct\\Default.cshtml",
+              "RelativeDocumentMoniker": "Project_CarRental\\Views\\Shared\\Components\\EvaluateProduct\\Default.cshtml",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Views\\Shared\\Components\\EvaluateProduct\\Default.cshtml",
+              "RelativeToolTip": "Project_CarRental\\Views\\Shared\\Components\\EvaluateProduct\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T14:52:08.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ViewEvaluate.cs",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\ViewEvaluate.cs",
+              "RelativeDocumentMoniker": "Project_CarRental\\Models\\ViewEvaluate.cs",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\ViewEvaluate.cs",
+              "RelativeToolTip": "Project_CarRental\\Models\\ViewEvaluate.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T14:45:56.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewProduct.cs",
+              "DocumentMoniker": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\ViewProduct.cs",
+              "RelativeDocumentMoniker": "Project_CarRental\\Models\\ViewProduct.cs",
+              "ToolTip": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\Models\\ViewProduct.cs",
+              "RelativeToolTip": "Project_CarRental\\Models\\ViewProduct.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA4wB8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T14:45:53.913Z",
               "EditorCaption": ""
             }
           ]

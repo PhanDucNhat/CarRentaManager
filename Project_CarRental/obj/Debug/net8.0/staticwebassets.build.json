@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kj80MmGDoo0lu5NDCzbIiZcNxKatxsV+P6xnRume73Y=",
+  "Hash": "VXION/P1KdOMfQtH7MDcqsArbCvTtv1wSCDfAXrEsMM=",
   "Source": "Project_CarRental",
   "BasePath": "_content/Project_CarRental",
   "Mode": "Default",
@@ -30398,12 +30398,12 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\wwwroot\\files\\hienthidulieu.png",
+      "Identity": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\wwwroot\\files\\about.jpg",
       "SourceId": "Project_CarRental",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\wwwroot\\",
       "BasePath": "_content/Project_CarRental",
-      "RelativePath": "files/hienthidulieu.png",
+      "RelativePath": "files/about.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -30414,7 +30414,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\hienthidulieu.png"
+      "OriginalItemSpec": "wwwroot\\files\\about.jpg"
     },
     {
       "Identity": "E:\\Hoc_ki_1.1_(2024-2025)\\Thuc_tap_chuyen_nganh-Nguyen_Quang_Ninh\\Project_CarRental\\Project_CarRental\\wwwroot\\fonts\\flaticon\\backup.txt",

@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[8.0.7, )"
             },
+            "Select.HtmlToPdf.NetCore": {
+              "target": "Package",
+              "version": "[24.1.0, )"
+            },
             "SlugGenerator": {
               "target": "Package",
               "version": "[2.0.2, )"
@@ -71,6 +75,10 @@
             "elFinder.NetCore": {
               "target": "Package",
               "version": "[1.4.1, )"
+            },
+            "toastr": {
+              "target": "Package",
+              "version": "[2.1.1, )"
             }
           },
           "imports": [

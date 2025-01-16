@@ -16,6 +16,8 @@ namespace Project_CarRental.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
+            if (!Functions.IsLogin())
+                return RedirectToAction("Index", "Login");
             var mnList = _context.Menus.OrderBy(m => m.MenuID).ToList();
 
             foreach (var menu in mnList)

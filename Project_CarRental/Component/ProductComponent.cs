@@ -24,7 +24,7 @@ namespace Project_CarRental.Component
                                      m.CarName,
                                      n.PricesDay,
                                      n.Seats
-                                 }).Take(6).ToList();
+                                 }).Take(5).ToList();
             return await Task.FromResult((IViewComponentResult)View("Default", listofProduct));
         }
     }

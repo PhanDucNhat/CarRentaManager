@@ -17,5 +17,16 @@ namespace Project_CarRental.Models
 		public TimeSpan? PickUpTime { get; set; }
 		public bool? IsActive { get; set; }
 		public string? Status { get; set; }
-	}
+		public DateTime? CreateDate { get; set; }
+
+		[Column(TypeName = "decimal(12,3)")]
+		public decimal? TotalAmount { get; set; }
+
+		[NotMapped]
+        public string? CarName { get; set; }
+        [NotMapped]
+        public string? FullName { get; set; }
+        [NotMapped]
+        public string? Phone { get; set; }
+    }
 }

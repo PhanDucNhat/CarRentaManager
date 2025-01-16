@@ -12,8 +12,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
+          "Select.HtmlToPdf.NetCore": "24.1.0",
           "SlugGenerator": "2.0.2",
-          "elFinder.NetCore": "1.4.1"
+          "elFinder.NetCore": "1.4.1",
+          "toastr": "2.1.1"
         },
         "runtime": {
           "Project_CarRental.dll": {}
@@ -606,6 +608,7 @@
           }
         }
       },
+      "jQuery/1.6.3": {},
       "MD5/2.2.5": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
@@ -1764,6 +1767,24 @@
           }
         }
       },
+      "Select.HtmlToPdf.NetCore/24.1.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "System.Buffers": "4.5.1",
+          "System.Drawing.Common": "7.0.0",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Security.Principal.Windows": "5.0.0",
+          "System.Text.Encoding.CodePages": "6.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Select.HtmlToPdf.dll": {
+            "assemblyVersion": "24.1.0.0",
+            "fileVersion": "24.1.0.0"
+          }
+        }
+      },
       "SixLabors.ImageSharp/3.1.5": {
         "runtime": {
           "lib/net6.0/SixLabors.ImageSharp.dll": {
@@ -1780,6 +1801,7 @@
           }
         }
       },
+      "System.Buffers/4.5.1": {},
       "System.ClientModel/1.0.0": {
         "dependencies": {
           "System.Memory.Data": "1.0.2",
@@ -2086,6 +2108,11 @@
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
           }
+        }
+      },
+      "toastr/2.1.1": {
+        "dependencies": {
+          "jQuery": "1.6.3"
         }
       }
     }
@@ -2466,6 +2493,13 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
+    },
+    "jQuery/1.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vb0p7+eRmc2evBCT9W7PCUupqWiDMi9/ofBHN99LraRzLY5jPKMeFzFYBoMgwA8TiwRoFDke5hiDDLsvae7qMg==",
+      "path": "jquery/1.6.3",
+      "hashPath": "jquery.1.6.3.nupkg.sha512"
     },
     "MD5/2.2.5": {
       "type": "package",
@@ -2964,6 +2998,13 @@
       "path": "nuget.versioning/6.11.0",
       "hashPath": "nuget.versioning.6.11.0.nupkg.sha512"
     },
+    "Select.HtmlToPdf.NetCore/24.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ElMGK1nthxUbzc+kSI1sEXKftk9QKYEaMfRQaVuBV4TEtegEFv4yril2Y4Dho55RFzQPX9nkCEkZwGM4x8tTHA==",
+      "path": "select.htmltopdf.netcore/24.1.0",
+      "hashPath": "select.htmltopdf.netcore.24.1.0.nupkg.sha512"
+    },
     "SixLabors.ImageSharp/3.1.5": {
       "type": "package",
       "serviceable": true,
@@ -2977,6 +3018,13 @@
       "sha512": "sha512-YnZfqVSdEaD+Ulif5GihlnrQjhSKpA4iDxC+S8i344w90IkBWjGDqYBRbl4aO47kXIDoFyUvWJWzvWNO6LLhXw==",
       "path": "sluggenerator/2.0.2",
       "hashPath": "sluggenerator.2.0.2.nupkg.sha512"
+    },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",
@@ -3243,6 +3291,13 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "toastr/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h/688XvzYk1xVYn213ryU+HCElE4n/drYzAHJkAi9LsSUPS3EbI6wGlvCglBUt7i4h5iESgAVarYaigjQmVpqg==",
+      "path": "toastr/2.1.1",
+      "hashPath": "toastr.2.1.1.nupkg.sha512"
     }
   }
 }

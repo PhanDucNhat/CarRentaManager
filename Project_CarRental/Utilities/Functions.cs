@@ -25,15 +25,16 @@ namespace Project_CarRental.Utilities
 
         public static string MD5Hash(string text)
         {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
-            byte[] result = md5.Hash;
-            StringBuilder strBuilder = new StringBuilder();
-            for (int i = 0; i < result.Length; i++)
+            using (MD5 md5 = MD5.Create()) // Sử dụng MD5.Create() thay vì MD5CryptoServiceProvider
             {
-                strBuilder.Append(result[i].ToString("x2"));
+                byte[] data = md5.ComputeHash(Encoding.ASCII.GetBytes(text));
+                StringBuilder strBuilder = new StringBuilder();
+                for (int i = 0; i < data.Length; i++)
+                {
+                    strBuilder.Append(data[i].ToString("x2"));
+                }
+                return strBuilder.ToString();
             }
-            return strBuilder.ToString();
         }
 
         public static string MD5Password(string? text)

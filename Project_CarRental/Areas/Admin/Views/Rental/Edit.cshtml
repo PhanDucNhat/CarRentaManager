@@ -1,0 +1,76 @@
+﻿@model Project_CarRental.Models.Rental
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Cập nhật trạng thái đặt xe</h2>
+    </div>
+    <div class="container shadow p-5">
+        <form method="post" asp-action="Edit">
+            <div asp-validation-summary="All"></div>
+            <div class="row" style="padding-bottom: 10px;">
+                <div class="row">
+                    <input type="text" class="form-control mb-3" asp-for="RentalID" type="hidden">
+                    <div class="form-group col-sm-6">
+                        <label asp-for="FullName">Tên khách hàng</label>
+                        <input type="text" class="form-control mb-3" asp-for="FullName" readonly>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label asp-for="CarName">Tên xe đặt</label>
+                        <input type="text" class="form-control mb-3" asp-for="CarName" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label asp-for="PickUpLocation">Điểm đón</label>
+                        <input type="text" class="form-control mb-3" asp-for="PickUpLocation" readonly>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label asp-for="PickUpDate">Ngày đón</label>
+                        <input type="text" class="form-control mb-3" asp-for="PickUpDate" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label asp-for="Status">Trạng thái</label>
+                        <select asp-for="Status" class="form-select" id="Status">
+                            <option value="Chờ xác nhận">Chờ xác nhận</option>
+                            <option value="Đã xác nhận">Đã xác nhận</option>
+                            <option value="Hoàn thành">Hoàn thành</option>
+                            <option value="Đã hủy">Đã hủy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="UserID" class="form-control" readonly />
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="ProductID" class="form-control" readonly />
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="DropOffLocation" class="form-control" readonly />
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="DropOffDate" class="form-control" readonly />
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="PickUpTime" class="form-control" readonly />
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="IsActive" class="form-control" readonly />
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="CreateDate" class="form-control" readonly />
+                </div>
+                <div class="form-group col-sm-6 d-none">
+                    <input asp-for="TotalAmount" class="form-control" readonly />
+                </div>
+            </div>
+            <a href="javascript:history.back()" class="btn btn-lg btn-warning p-2 mr5"><i class="bi bi-arrow-left-circle"></i>Quay lại</a>
+            <button type="submit" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Cập nhật</button>
+        </form>
+    </div>
+</main>

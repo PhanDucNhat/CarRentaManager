@@ -1,4 +1,5 @@
 ﻿@model Project_CarRental.Models.ViewProduct;
+@using Project_CarRental.Utilities;
 
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
@@ -231,6 +232,86 @@
 	</div>
 </section>
 
+<section class="ftco-section bg-light" style="padding: 2em 0;">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+				<h2 class="mb-2" style="color: #2d3436; font-weight: bold;">Thông tin quan trọng</h2>
+				<p style="color: #636e72;">Hãy đảm bảo bạn đã đọc và hiểu rõ các thông tin dưới đây trước khi thuê xe</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 mb-4">
+				<div class="categories p-4 rounded" style="background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+					<h3 class="mb-3 d-flex align-items-center" style="color: #0984e3;">
+						<span class="icon ion-ios-document mr-2" style="font-size: 1.5em; color: #74b9ff;"></span>
+						Giấy tờ xe
+					</h3>
+					<ul class="features">
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Giấy đăng ký xe</li>
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Giấy kiểm định an toàn</li>
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Bảo hiểm xe</li>
+					</ul>
+				</div>
+				<div class="categories p-4 rounded mt-4" style="background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+					<h3 class="mb-3 d-flex align-items-center" style="color: #d63031;">
+						<span class="icon ion-ios-lock mr-2" style="font-size: 1.5em; color: #fab1a0;"></span>
+						Tài sản thế chấp
+					</h3>
+					<ul class="features">
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Hộ chiếu hoặc CMND</li>
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Tài sản có giá trị tương đương</li>
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Đặt cọc tiền mặt (tuỳ thuộc vào xe)</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-7 mb-4">
+				<div class="categories p-4 rounded" style="background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+					<h3 class="mb-3 d-flex align-items-center" style="color: #6c5ce7;">
+						<span class="icon ion-ios-paper mr-2" style="font-size: 1.5em; color: #a29bfe;"></span>
+						Điều khoản
+					</h3>
+					<ul class="features">
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Xe chỉ được sử dụng cho mục đích hợp pháp</li>
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Không được phép chuyển nhượng xe cho bên thứ ba</li>
+						<li class="check"><span class="ion-ios-checkmark" style="color: #00b894;"></span> Khách hàng chịu trách nhiệm về các vi phạm giao thông</li>
+					</ul>
+				</div>
+				<div class="categories p-4 rounded mt-4" style="background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+					<h3 class="mb-3 d-flex align-items-center" style="color: #e17055;">
+						<span class="icon ion-ios-close-circle mr-2" style="font-size: 1.5em; color: #fab1a0;"></span>
+						Chính sách hủy chuyến
+					</h3>
+					<div class="table-responsive">
+						<table class="table table-bordered" style="color: #2d3436; font-size: 0.9em; min-width: 400px !important;">
+							<thead style="background-color: #ffeaa7;">
+								<tr>
+									<th scope="col" style="text-align: center;">Thời gian hủy</th>
+									<th scope="col" style="text-align: center;">Phí hủy</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td style="text-align: center;">Hủy trước 24 giờ</td>
+									<td style="text-align: center; color: #00b894;">Miễn phí</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">Hủy trong vòng 24 giờ</td>
+									<td style="text-align: center; color: #d63031;">Thu phí 20%</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">Không hủy và không nhận xe</td>
+									<td style="text-align: center; color: #d63031;">Thu phí 100%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="ftco-section" style="padding: 2em 0;">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -240,40 +321,38 @@
 		</div>
 		<div class="row">
 			<div class="col-md-8">
-				@if (TempData["ErrorMessage"] != null)
-				{
-					<div class="alert alert-danger text-center">
-						@TempData["ErrorMessage"]
-					</div>
-				}
-				@if (TempData["SuccessMessage"] != null)
-				{
-					<div class="alert alert-success text-center">
-						@TempData["SuccessMessage"]
-					</div>
-				}
 				<form action="@Url.Action("BookCar", "Rental")" method="post" class="request-form ftco-animate bg-primary">
 					<h2 class="text-center">Chuyến đi của bạn</h2>
 
-					<!-- Hidden field for ProductID -->
 					<input type="hidden" name="ProductID" value="@Model.ProductID" />
+					<input type="hidden" name="total_amount" id="totalAmount" value="0">
 
-					<div class="form-group">
+					<div class="form-group position-relative">
 						<label for="" class="label">Địa điểm đón</label>
-						<input type="text" name="pickup_location" class="form-control" placeholder="Thành phố, sân bay, nhà ga, etc" required>
+						<div class="input-group">
+							<input type="text" name="pickup_location" class="form-control" placeholder="Thành phố, sân bay, nhà ga, etc" required>
+							<span class="input-group-text" style="cursor: pointer;" onclick="openGoogleMap()">
+								<i class="fas fa-map-marker-alt" style="color: #0984e3;"></i>
+							</span>
+						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group position-relative">
 						<label for="" class="label">Địa điểm trả</label>
-						<input type="text" name="dropoff_location" class="form-control" placeholder="Thành phố, sân bay, nhà ga, etc" required>
+						<div class="input-group">
+							<input type="text" name="dropoff_location" class="form-control" placeholder="Thành phố, sân bay, nhà ga, etc" required>
+							<span class="input-group-text" style="cursor: pointer;" onclick="openGoogleMap()">
+								<i class="fas fa-map-marker-alt" style="color: #0984e3;"></i>
+							</span>
+						</div>
 					</div>
 					<div class="d-flex">
 						<div class="form-group mr-2">
 							<label for="" class="label">Ngày đón</label>
-							<input type="date" name="pick_up_date" class="form-control" required>
+							<input type="date" name="pick_up_date" class="form-control" id="pickUpDate" required>
 						</div>
 						<div class="form-group ml-2">
 							<label for="" class="label">Ngày trả</label>
-							<input type="date" name="drop_off_date" class="form-control" required>
+							<input type="date" name="drop_off_date" class="form-control" id="dropOffDate" required>
 						</div>
 						<div class="form-group ml-2">
 							<label for="" class="label">Thời gian đón</label>
@@ -287,17 +366,63 @@
 			</div>
 
 			<div class="col-md-4">
-				<div class="categories">
-					<h3 style="text-align: center;">Phí & phụ phí</h3>
-					<ul>
-						<li>Thuê giờ <span style="float: right; font-weight: bold;">@Html.Raw(Model.PricesHour) vnd</span></li>
-						<li>Thuê ngày <span style="float: right; font-weight: bold;">@Html.Raw(Model.PricesDay) vnd</span></li>
-						<li>Thuê tháng <span style="float: right; font-weight: bold;">@Html.Raw(Model.PricesMonth) vnd</span></li>
-						<li>Ngoài giờ <span style="float: right; font-weight: bold;">@Html.Raw(Model.OverTime) vnd/giờ</span></li>
-						<li>Vượt cây số <span style="float: right; font-weight: bold;">@Html.Raw(Model.ExceedKm) vnd/km</span></li>
-						<li>Lưu đêm <span style="float: right; font-weight: bold;">@Html.Raw(Model.OverNight) vnd/đêm</span></li>
-						<li>Chủ nhật-ngày lễ <span style="float: right; font-weight: bold;">@Html.Raw(Model.Holiday) vnd/ngày</span></li>
-						<li>Đường dài <span style="float: right; font-weight: bold;">@Html.Raw(Model.LongRoad)</span></li>
+				<div class="categories p-4 rounded" style="background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+					<h3 class="mb-4 text-center" style="color: #0984e3; font-weight: bold; font-size: 1.4em;">Phí</h3>
+					<ul class="list-unstyled">
+						<li class="d-flex justify-content-between py-2">
+							<span>Thuê ngày</span>
+							<span class="font-weight-bold" id="pricePerDay">@Html.Raw(Model.PricesDay) vnd/ngày</span>
+						</li>
+						<li class="d-flex justify-content-between py-2">
+							<span>Bảo hiểm thuê xe</span>
+							<span class="font-weight-bold" id="insuranceFee">50,000 vnd</span>
+						</li>
+						<li class="d-flex justify-content-between py-2">
+							<span>Mã khuyến mại</span>
+							<span class="font-weight-bold">
+								<select id="promoCode" class="form-control" style="max-width: 180px; display: inline-block;">
+									<option value="0">Chọn</option>
+									<option value="10000">- 10,000 VND</option>
+									<option value="20000">- 20,000 VND</option>
+									<option value="30000">- 30,000 VND</option>
+								</select>
+							</span>
+						</li>
+					</ul>
+					<div id="calculationFormula" class="mb-2 font-weight-bold" style="font-size: 1em; color: #7f8c8d; text-align: right;"></div>
+
+					<div class="total-amount mt-3 font-weight-bold text-right" style="font-size: 1.2em; color: #e17055;">
+						Tổng tiền: <span id="totalPrice" style="color: red;">0 vnd</span>
+					</div>
+				</div>
+
+				<div class="categories p-4 rounded mt-4" style="background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+					<h3 class="mb-4 text-center" style="color: #d63031; font-weight: bold; font-size: 1.4em;">Phụ phí phát sinh</h3>
+					<ul class="list-unstyled">
+						<li class="d-flex justify-content-between py-2">
+							<span>Thuê giờ</span>
+							<span class="font-weight-bold">@Html.Raw(Model.PricesHour) vnd</span>
+						</li>
+						<li class="d-flex justify-content-between py-2">
+							<span>Ngoài giờ</span>
+							<span class="font-weight-bold">@Html.Raw(Model.OverTime) vnd/giờ</span>
+						</li>
+						<li class="d-flex justify-content-between py-2">
+							<span>Vượt cây số</span>
+							<span class="font-weight-bold">@Html.Raw(Model.ExceedKm) vnd/km</span>
+						</li>
+						<li class="d-flex justify-content-between py-2">
+							<span>Lưu đêm</span>
+							<span class="font-weight-bold">@Html.Raw(Model.OverNight) vnd/đêm</span>
+						</li>
+						<li class="d-flex justify-content-between py-2">
+							<span>Chủ nhật-ngày lễ</span>
+							<span class="font-weight-bold">@Html.Raw(Model.Holiday) vnd/ngày</span>
+						</li>
+						<li class="d-flex justify-content-between py-2">
+							<span>Đường dài</span>
+							<span class="font-weight-bold">@Html.Raw(Model.LongRoad)</span>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -305,6 +430,71 @@
 	</div>
 </section>
 
+<script>
+	function openGoogleMap() {
+		window.open("https://www.google.com/maps", "_blank");
+	}
+
+	document.addEventListener("DOMContentLoaded", function () {
+
+		const pickUpDate = document.getElementById("pickUpDate");
+		const dropOffDate = document.getElementById("dropOffDate");
+		const pricePerDay = parseInt(document.getElementById("pricePerDay").textContent.replace(' vnd', '').replace(',', ''), 10);
+		const insuranceFee = 50000;
+		const totalPriceElement = document.getElementById("totalPrice");
+		const totalAmountInput = document.getElementById("totalAmount");
+		const calculationFormula = document.getElementById("calculationFormula");
+		const promoCodeSelect = document.getElementById("promoCode");
+
+		let total = 0;
+		let discount = 0;
+
+		function updateTotalPrice() {
+			const pickUp = new Date(pickUpDate.value);
+			const dropOff = new Date(dropOffDate.value);
+
+			if (pickUp && dropOff && dropOff >= pickUp) {
+
+				const timeDifference = dropOff - pickUp;
+				const days = Math.ceil(timeDifference / (1000 * 3600 * 24));
+
+				switch (promoCodeSelect.value) {
+					case "10000":
+						discount = 10000;
+						break;
+					case "20000":
+						discount = 20000;
+						break;
+					case "30000":
+						discount = 30000;
+						break;
+					default:
+						discount = 0;
+						break;
+				}
+
+				total = (days * pricePerDay) + insuranceFee - discount;
+
+				totalPriceElement.textContent = total.toLocaleString() + " vnd";
+
+				totalAmountInput.value = (total / 1000).toString();
+
+				calculationFormula.textContent = `${pricePerDay.toLocaleString()} vnd X ${days} ngày`;
+
+				console.log("Raw total:", total);
+				console.log("Total amount to be saved:", totalAmountInput.value);
+			} else {
+				totalPriceElement.textContent = "0 vnd";
+				totalAmountInput.value = "0";
+				calculationFormula.textContent = "";
+			}
+		}
+
+		pickUpDate.addEventListener("change", updateTotalPrice);
+		dropOffDate.addEventListener("change", updateTotalPrice);
+		promoCodeSelect.addEventListener("change", updateTotalPrice);
+	});
+</script>
 
 
 @await Component.InvokeAsync("ViewProduct")

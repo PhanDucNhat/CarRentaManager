@@ -16,6 +16,8 @@ namespace Project_CarRental.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
+            if (!Functions.IsLogin())
+                return RedirectToAction("Index", "Login");
             var mnList = (from p in _context.Products
                           join m in _context.Menus on p.MenuID equals m.MenuID
                           orderby p.ProductID
@@ -26,7 +28,8 @@ namespace Project_CarRental.Areas.Admin.Controllers
                               MenuID = p.MenuID,
                               Category = p.Category,
                               IsActive = p.IsActive,
-                              MenuName = m.MenuName
+                              MenuName = m.MenuName,
+                              Status = p.Status
                           }).ToList();
 
             return View(mnList);

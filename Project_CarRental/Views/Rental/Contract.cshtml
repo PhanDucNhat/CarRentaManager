@@ -1,0 +1,128 @@
+﻿@using Project_CarRental.Utilities;
+@model Rental;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<section class="menu-spacing" style="height: 120px; background-color: #1e3a8a;"></section>
+
+<button id="btnPdf" class="btn btn-success" style="position: absolute; top: 22%; right: 150px; transform: translateY(-50%); padding: 10px 20px; font-size: 16px; border-radius: 5px;">
+    Tải file PDF <i class="fas fa-download"></i>
+</button>
+
+<section class="contract-section py-4" style="border: 1px solid #000; margin: 10px auto; padding: 10px; border-radius: 5px; max-width: 900px;" id="pdfContainer">
+    <div class="container">
+        <div class="row text-center mb-3">
+            <div class="col-12">
+                <p class="mb-0" style="font-weight: bold; font-size: 18px;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+                <p style="font-size: 16px;">Độc lập - Tự do - Hạnh phúc</p>
+                <hr style="width: 50%; margin: 10px auto; border-top: 1px solid #000;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mb-3">
+                <h1 style="font-size: 24px; margin-bottom: 5px;">HỢP ĐỒNG THUÊ XE</h1>
+                <p><strong>Số hợp đồng:</strong> HD-@Model.RentalID</p>
+                <input type="hidden" id="rentalId" value="@Model.RentalID" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <p><strong>Hôm nay ngày: @Model.CreateDate?.ToString("dd/MM/yyyy")</strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Bên A (Công ty cho thuê xe):</strong></p>
+                <p>Công ty cổ phần Bầu Trời Á Đông (ASIASKY)</p>
+                <p>Địa chỉ: 128 Lê Duẩn, TP.Vinh, Nghệ An</p>
+                <p>Số điện thoại: 0123 456 789</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Bên B (Khách hàng):</strong></p>
+                <p>Họ tên: @Model.FullName</p>
+                <p>Số điện thoại: @Model.Phone</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <p><strong>Nội dung hợp đồng:</strong></p>
+                <p>Bên A đồng ý cho Bên B thuê xe với các thông tin chi tiết như sau:</p>
+
+                <p><strong>1. Thông tin xe:</strong></p>
+                <ul>
+                    <li><strong>Tên xe:</strong> @Model.CarName</li> <!-- Tên xe -->
+                    <li><strong>Điểm nhận xe:</strong> @Model.PickUpLocation</li>
+                    <li><strong>Điểm trả xe:</strong> @Model.DropOffLocation</li>
+                    <li><strong>Ngày nhận xe:</strong> @Model.PickUpDate?.ToString("dd/MM/yyyy")</li>
+                    <li><strong>Ngày trả xe:</strong> @Model.DropOffDate?.ToString("dd/MM/yyyy")</li>
+                    <li><strong>Giờ nhận xe:</strong> @Model.PickUpTime?.ToString(@"hh\:mm")</li>
+                </ul>
+
+                <p><strong>2. Chi phí thuê xe:</strong></p>
+                <p>Tổng số tiền: @Model.TotalAmount?.ToString("#,##0.000").Replace(".", ",") VND</p>
+
+                <p><strong>3. Trách nhiệm của các bên:</strong></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>Bên A:</strong></p>
+                        <ul>
+                            <li>Cung cấp xe đúng thông tin như trong hợp đồng.</li>
+                            <li>Đảm bảo xe được kiểm tra kỹ lưỡng trước khi giao.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Bên B:</strong></p>
+                        <ul>
+                            <li>Thanh toán đầy đủ số tiền thuê xe.</li>
+                            <li>Đảm bảo xe không bị hư hỏng ngoài ý muốn trong thời gian thuê.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p><strong>4. Điều khoản chung:</strong></p>
+                <ul>
+                    <li>Hợp đồng này có hiệu lực kể từ ngày ký.</li>
+                    <li>Hai bên cam kết thực hiện đầy đủ các điều khoản đã nêu.</li>
+                </ul>
+
+                <p class="mt-4">Hợp đồng được lập thành 02 bản, mỗi bên giữ 01 bản và có giá trị pháp lý như nhau.</p>
+
+                <div class="row mt-4">
+                    <div class="col-md-6 text-center">
+                        <p><strong>Bên A</strong></p>
+                        <p>(Ký tên và đóng dấu)</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <p><strong>Bên B</strong></p>
+                        <p>(Ký và ghi rõ họ tên)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<script type="text/javascript">
+    $("#btnPdf").click(function () {
+        var sHtml = $("#pdfContainer").html();
+        sHtml = sHtml.replace(/</g, "StrTag").replace(/>/g, "EndTag");
+        window.open("../Home/GeneratePdf?html=" + sHtml, "_blank");
+    });
+</script>-->
+
+<script>
+    document.getElementById('btnPdf').addEventListener('click', function () {
+        const rentalId = document.getElementById('rentalId').value;
+
+        const element = document.getElementById('pdfContainer');
+
+        const options = {
+            margin: 10,
+            filename: `HopDongThueXe_HD-${rentalId}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' }
+        };
+
+        html2pdf().from(element).set(options).save();
+    });
+</script>
