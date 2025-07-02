@@ -1,5 +1,4 @@
 # CarRentaManager
-# CarRentaManager
 ## 📝 Tổng quan
 Đây là một **website quản lý cho thuê xe ô tô** được xây dựng để hỗ trợ các hoạt động kinh doanh cho thuê xe như: đăng ký tài khoản, quản lý xe, đặt xe, đăng bài viết, đánh giá và quản lý thông tin khách hàng. Hệ thống bao gồm **giao diện người dùng** (khách thuê xe) và **giao diện quản trị viên** (admin) để quản lý toàn bộ dữ liệu trên hệ thống.
 ## 🚀 Tính năng chính
