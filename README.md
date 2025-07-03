@@ -36,7 +36,7 @@ git clone https://github.com/PhanDucNhat/CarRentaManager.git
   <add name="DefaultConnection" 
        connectionString="Data Source=.;Initial Catalog=CarRentalDb;Integrated Security=True" 
        providerName="System.Data.SqlClient" />
-</connectionStrings>```
+</connectionStrings>**```**
 - Nếu chưa có database: import file .bak hoặc chạy file script .sql trong thư mục Database/ để tạo dữ liệu mẫu.
 ### Bước 4: Chạy project
 - Nhấn F5 hoặc click Start trong Visual Studio
