@@ -22,14 +22,13 @@
 - **Frontend:** Bootstrap  
 - **Công cụ phát triển:** Visual Studio, SSMS (SQL Server Management Studio)
 ---
-
 ## 📦 Hướng dẫn cài đặt và chạy dự án
 ### Bước 1: Clone repository
 git clone https://github.com/PhanDucNhat/CarRentaManager.git
-Bước 2: Mở bằng Visual Studio
+### Bước 2: Mở bằng Visual Studio
 Mở Visual Studio > File > Open > Project/Solution
 Chọn file .sln trong thư mục vừa clone
-Bước 3: Cấu hình chuỗi kết nối CSDL
+### Bước 3: Cấu hình chuỗi kết nối CSDL
 Mở Web.config
 Cập nhật lại connectionString để trỏ đúng đến SQL Server trên máy bạn
 xml
@@ -41,7 +40,7 @@ Chỉnh sửa
        providerName="System.Data.SqlClient" />
 </connectionStrings>
 Nếu chưa có database: import file .bak hoặc chạy file script .sql trong thư mục Database/ để tạo dữ liệu mẫu.
-Bước 4: Chạy project
+### Bước 4: Chạy project
 Nhấn F5 hoặc click Start trong Visual Studio
 Trình duyệt sẽ mở website tại http://localhost:xxxx
 📷 Giao diện khi chạy
