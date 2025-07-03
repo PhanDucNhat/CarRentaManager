@@ -36,19 +36,19 @@ git clone https://github.com/PhanDucNhat/CarRentaManager.git
        connectionString="Data Source=.;Initial Catalog=CarRentalDb;Integrated Security=True" 
        providerName="System.Data.SqlClient" />
 </connectionStrings>
-## Nếu chưa có database: import file .bak hoặc chạy file script .sql trong thư mục Database/ để tạo dữ liệu mẫu.
+- Nếu chưa có database: import file .bak hoặc chạy file script .sql trong thư mục Database/ để tạo dữ liệu mẫu.
 ### Bước 4: Chạy project
-Nhấn F5 hoặc click Start trong Visual Studio
-Trình duyệt sẽ mở website tại http://localhost:xxxx
+- Nhấn F5 hoặc click Start trong Visual Studio
+- Trình duyệt sẽ mở website tại http://localhost:xxxx
 ## 📷 Giao diện khi chạy
-Trang chủ: Hiển thị danh sách xe đang cho thuê
-Trang chi tiết xe: Xem thông tin, đánh giá và đặt xe
-Trang quản trị: Quản lý xe, người dùng, đơn đặt
-Trang bài viết: Cập nhật tin tức, kinh nghiệm thuê xe
+- Trang chủ: Hiển thị danh sách xe đang cho thuê
+- Trang chi tiết xe: Xem thông tin, đánh giá và đặt xe
+- Trang quản trị: Quản lý xe, người dùng, đơn đặt
+- Trang bài viết: Cập nhật tin tức, kinh nghiệm thuê xe
 ## ✅ Tài khoản mẫu để đăng nhập
-Tài khoản người dùng:
+- Tài khoản người dùng:
 Email: user1@example.com
 Mật khẩu: 123456
-Tài khoản admin:
+- Tài khoản admin:
 Email: admin@example.com
 Mật khẩu: admin123
