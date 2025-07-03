@@ -1,7 +1,7 @@
 # CarRentaManager
-## 📝 Tổng quan
+## Tổng quan
 Đây là một **website quản lý cho thuê xe ô tô** được xây dựng để hỗ trợ các hoạt động kinh doanh cho thuê xe như: đăng ký tài khoản, quản lý xe, đặt xe, đăng bài viết, đánh giá và quản lý thông tin khách hàng. Hệ thống bao gồm **giao diện người dùng** (khách thuê xe) và **giao diện quản trị viên** (admin) để quản lý toàn bộ dữ liệu trên hệ thống.
-## 🚀 Tính năng chính
+## Tính năng chính
 ### Người dùng
 - Đăng ký / Đăng nhập
 - Xem danh sách xe và chi tiết từng xe
@@ -15,14 +15,13 @@
 - Quản lý đặt xe
 - Quản lý bài viết, đánh giá
 ---
-## 🛠 Công nghệ sử dụng
+## Công nghệ sử dụng
 - **Ngôn ngữ lập trình:** C#, HTML, CSS, JavaScript, jQuery  
 - **Framework:** ASP.NET MVC  
 - **Database:** SQL Server  
 - **Frontend:** Bootstrap  
 - **Công cụ phát triển:** Visual Studio, SSMS (SQL Server Management Studio)
----
-## 📦 Hướng dẫn cài đặt và chạy dự án
+## Hướng dẫn cài đặt và chạy dự án
 ### Bước 1: Clone repository
 git clone https://github.com/PhanDucNhat/CarRentaManager.git
 ### Bước 2: Mở bằng Visual Studio
@@ -42,12 +41,12 @@ git clone https://github.com/PhanDucNhat/CarRentaManager.git
 ### Bước 4: Chạy project
 - Nhấn F5 hoặc click Start trong Visual Studio
 - Trình duyệt sẽ mở website tại http://localhost:xxxx
-## 📷 Giao diện khi chạy
+## Giao diện khi chạy
 - Trang chủ: Hiển thị danh sách xe đang cho thuê
 - Trang chi tiết xe: Xem thông tin, đánh giá và đặt xe
 - Trang quản trị: Quản lý xe, người dùng, đơn đặt
 - Trang bài viết: Cập nhật tin tức, kinh nghiệm thuê xe
-## ✅ Tài khoản mẫu để đăng nhập
+## Tài khoản mẫu để đăng nhập
 - Tài khoản người dùng:
 Email: user1@example.com
 Mật khẩu: 123456
