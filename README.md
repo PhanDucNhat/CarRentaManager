@@ -43,12 +43,12 @@ Nếu chưa có database: import file .bak hoặc chạy file script .sql trong 
 ### Bước 4: Chạy project
 Nhấn F5 hoặc click Start trong Visual Studio
 Trình duyệt sẽ mở website tại http://localhost:xxxx
-📷 Giao diện khi chạy
+## 📷 Giao diện khi chạy
 Trang chủ: Hiển thị danh sách xe đang cho thuê
 Trang chi tiết xe: Xem thông tin, đánh giá và đặt xe
 Trang quản trị: Quản lý xe, người dùng, đơn đặt
 Trang bài viết: Cập nhật tin tức, kinh nghiệm thuê xe
-✅ Tài khoản mẫu để đăng nhập
+## ✅ Tài khoản mẫu để đăng nhập
 Tài khoản người dùng:
 Email: user1@example.com
 Mật khẩu: 123456
