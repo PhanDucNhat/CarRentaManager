@@ -25,7 +25,6 @@
 
 ## 📦 Hướng dẫn cài đặt và chạy dự án
 ### Bước 1: Clone repository
-```bash
 git clone https://github.com/PhanDucNhat/CarRentaManager.git
 Bước 2: Mở bằng Visual Studio
 Mở Visual Studio > File > Open > Project/Solution
