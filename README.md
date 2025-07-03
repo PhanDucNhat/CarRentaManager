@@ -26,11 +26,11 @@
 ### Bước 1: Clone repository
 git clone https://github.com/PhanDucNhat/CarRentaManager.git
 ### Bước 2: Mở bằng Visual Studio
-Mở Visual Studio > File > Open > Project/Solution
-Chọn file .sln trong thư mục vừa clone
+- Mở Visual Studio > File > Open > Project/Solution
+- Chọn file .sln trong thư mục vừa clone
 ### Bước 3: Cấu hình chuỗi kết nối CSDL
-Mở Web.config
-Cập nhật lại connectionString để trỏ đúng đến SQL Server trên máy bạn
+- Mở Web.config
+- Cập nhật lại connectionString để trỏ đúng đến SQL Server trên máy bạn
 <connectionStrings>
   <add name="DefaultConnection" 
        connectionString="Data Source=.;Initial Catalog=CarRentalDb;Integrated Security=True" 
