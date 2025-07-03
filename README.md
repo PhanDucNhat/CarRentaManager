@@ -31,6 +31,7 @@ git clone https://github.com/PhanDucNhat/CarRentaManager.git
 ### Bước 3: Cấu hình chuỗi kết nối CSDL
 - Mở Web.config
 - Cập nhật lại connectionString để trỏ đúng đến SQL Server trên máy bạn
+```xml
 <connectionStrings>
   <add name="DefaultConnection" 
        connectionString="Data Source=.;Initial Catalog=CarRentalDb;Integrated Security=True" 
