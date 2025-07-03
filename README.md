@@ -31,15 +31,12 @@ Chọn file .sln trong thư mục vừa clone
 ### Bước 3: Cấu hình chuỗi kết nối CSDL
 Mở Web.config
 Cập nhật lại connectionString để trỏ đúng đến SQL Server trên máy bạn
-xml
-Sao chép
-Chỉnh sửa
 <connectionStrings>
   <add name="DefaultConnection" 
        connectionString="Data Source=.;Initial Catalog=CarRentalDb;Integrated Security=True" 
        providerName="System.Data.SqlClient" />
 </connectionStrings>
-Nếu chưa có database: import file .bak hoặc chạy file script .sql trong thư mục Database/ để tạo dữ liệu mẫu.
+## Nếu chưa có database: import file .bak hoặc chạy file script .sql trong thư mục Database/ để tạo dữ liệu mẫu.
 ### Bước 4: Chạy project
 Nhấn F5 hoặc click Start trong Visual Studio
 Trình duyệt sẽ mở website tại http://localhost:xxxx
